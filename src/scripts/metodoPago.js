@@ -9,10 +9,23 @@ import { datosCrudos } from "../data/datosCrudos.js";
 const ventas = datosCrudos.ventas;
 
 function getMetodoPago(ventas) {
-    return {
-        labels: ventas.map(element => element.metodoPago),
-        data: ventas.map(element => element.monto)
-    };
+  const agrupado = {};
+
+  ventas.forEach(venta => {
+    const metodo = venta.metodoPago;
+    const monto = venta.monto;
+
+    if (agrupado[metodo]) {
+      agrupado[metodo] += monto;
+    } else {
+      agrupado[metodo] = monto;
+    }
+  });
+
+  return {
+    labels: Object.keys(agrupado),
+    data: Object.values(agrupado)
+  };
 }
 
 // console.log(getMetodoPago(ventas));

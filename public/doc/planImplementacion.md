@@ -46,7 +46,7 @@ Aquí se definen funciones que transforman los datos crudos en estructuras lista
 
 ### b Asistencia
 
-- **Función:** `getAsistenciaPorEstado(asistencia)`
+- **Función:** `getAsistenciaPorEstado(asistencia)` Jamir
   - **Entrada:** array de registros de asistencia.
   - **Proceso:** contar cuántos tienen `estado = presente` y cuántos `estado = ausente`.
   - **Salida:** `{ labels: ["Presentes","Ausentes"], data: [1,1] }`.
@@ -64,7 +64,7 @@ Aquí se definen funciones que transforman los datos crudos en estructuras lista
 
 ---
 
-### d KPIs
+### d KPIs - Pedro
 
 - **Función:** `getKPIs(data)`
   - **Entrada:** objeto completo con ventas, asistencia, tareas, usuarios.
