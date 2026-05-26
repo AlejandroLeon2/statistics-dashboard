@@ -1,4 +1,4 @@
-export const datosCrudos= {
+export const datosCrudos = {
   "ventas": [
     { "id": 1, "fecha": "2026-05-01", "hora": "12:30", "producto": "Makis", "categoria": "Comida", "cantidad": 2, "precioUnitario": 20, "monto": 40, "cliente": "Ana", "metodoPago": "Tarjeta" },
     { "id": 2, "fecha": "2026-05-01", "hora": "13:15", "producto": "Alitas BBQ", "categoria": "Comida", "cantidad": 1, "precioUnitario": 25, "monto": 25, "cliente": "Luis", "metodoPago": "Efectivo" },

@@ -43,6 +43,7 @@ Es el archivo principal de entrada de la aplicación web.
 Cuando abres el proyecto en un navegador web, este es el primer archivo que se carga. Es como la "puerta de entrada" de tu aplicación.
 
 **¿Qué contiene?**
+
 - Enlaces a las bibliotecas externas (Bootstrap y Chart.js)
 - Referencias a los archivos de estilos (CSS)
 - La estructura básica de la página (header, main, footer)
@@ -66,6 +67,7 @@ Una carpeta para guardar toda la documentación del proyecto.
 Aquí se guardan archivos como guías, manuales, explicaciones y cualquier documento que ayude a entender el proyecto. El archivo que estás leyendo ahora mismo está aquí.
 
 **¿Qué contiene?**
+
 - Archivos Markdown (.md) con documentación
 - Guías de uso
 - Explicaciones técnicas
@@ -82,11 +84,13 @@ Una carpeta que contiene los archivos de fuentes tipográficas (letras) que usa 
 Define qué tipo de letras se usarán en toda la aplicación. En este caso, se usa la fuente "Poppins".
 
 **¿Qué contiene?**
+
 - `Poppins-Regular.ttf` - La fuente normal (peso 400)
 - `Poppins-SemiBold.ttf` - La fuente seminegrita (peso 600)
 - `Poppins-Bold.ttf` - La fuente negrita (peso 700)
 
 **¿Por qué usar archivos de fuentes locales en lugar de fuentes de Google?**
+
 - **Velocidad**: Las fuentes cargan más rápido porque están en tu propio servidor
 - **Independencia**: No dependes de servicios externos
 - **Consistencia**: Las fuentes siempre se verán igual, sin importar la conexión a internet
@@ -109,16 +113,19 @@ Una carpeta para guardar todos los activos estáticos de la aplicación.
 Aquí se guardan imágenes, iconos, SVGs y cualquier recurso gráfico que se use en la aplicación.
 
 **¿Qué contiene?**
+
 - `gato-5.svg` - Un archivo de imagen en formato SVG (gráfico vectorial)
 
 **¿Qué es un archivo SVG?**
 SVG significa "Scalable Vector Graphics" (Gráficos Vectoriales Escalables). Es un formato de imagen que:
+
 - Se puede ampliar o reducir sin perder calidad
 - Está hecho con código (no píxeles)
 - Es muy ligero (pesa poco)
 - Se puede modificar con CSS
 
 **¿Por qué usar SVG en lugar de JPG o PNG?**
+
 - **Calidad**: Nunca se ve borroso, sin importar el tamaño
 - **Tamaño**: Archivos más pequeños
 - **Flexibilidad**: Puedes cambiar colores con CSS
@@ -133,6 +140,7 @@ Una carpeta que contiene los **componentes** de la aplicación.
 Los componentes son piezas de código reutilizables que se pueden usar en múltiples partes de la aplicación. Piensa en ellos como "bloques de construcción" que puedes ensamblar para crear páginas completas.
 
 **¿Por qué usar componentes?**
+
 - **Reutilización**: Escribe el código una vez, úsalo muchas veces
 - **Organización**: El código está más ordenado y fácil de encontrar
 - **Mantenimiento**: Si cambias un componente, se actualiza en todas partes donde se usa
@@ -145,11 +153,13 @@ El componente del encabezado (header) de la aplicación.
 
 **¿Para qué sirve?**
 Muestra la parte superior de cada página, que típicamente incluye:
+
 - El logo o nombre de la aplicación
 - El menú de navegación
 - Enlaces a otras secciones
 
 **¿Qué contiene?**
+
 - `header-component.js` - La lógica del componente (JavaScript)
 - `header-component.css` - Los estilos del componente (CSS)
 
@@ -163,12 +173,14 @@ El componente del pie de página (footer) de la aplicación.
 
 **¿Para qué sirve?**
 Muestra la parte inferior de cada página, que típicamente incluye:
+
 - Información de derechos de autor
 - Enlaces a términos y condiciones
 - Información de contacto
 - Enlaces a redes sociales
 
 **¿Qué contiene?**
+
 - `footer-component.js` - La lógica del componente (JavaScript)
 - `footer-component.css` - Los estilos del componente (CSS)
 
@@ -184,6 +196,7 @@ Una carpeta que contiene las diferentes **páginas** de la aplicación.
 Cada subcarpeta representa una página diferente del sitio web. Por ejemplo, puede haber una página de inicio, una página de login, una página de dashboard, etc.
 
 **¿Por qué organizar las páginas así?**
+
 - **Claridad**: Es fácil ver qué páginas existen
 - **Escalabilidad**: Es simple agregar nuevas páginas
 - **Mantenimiento**: Cada página tiene sus propios archivos organizados
@@ -197,17 +210,20 @@ La página del panel de control (dashboard) de la aplicación.
 Es la página principal donde se muestran las estadísticas, gráficos y datos importantes de la aplicación.
 
 **¿Qué contiene?**
+
 - `dashboardPage.html` - La estructura HTML de la página
 - `dashboardPage.js` - La lógica y funcionalidad de la página
 - `dashboardPage.css` - Los estilos específicos de esta página
 
 **¿Cómo funciona?**
+
 1. El HTML define la estructura básica
 2. El JavaScript carga los componentes (header, footer) y crea los gráficos
 3. El CSS define cómo se ve todo
 
 **¿Por qué tiene tres archivos separados?**
 Esto sigue el principio de **separación de responsabilidades**:
+
 - **HTML**: Define qué es (estructura)
 - **CSS**: Define cómo se ve (presentación)
 - **JavaScript**: Define qué hace (comportamiento)
@@ -221,6 +237,7 @@ Una carpeta que contiene los estilos globales de la aplicación.
 Aquí se definen los estilos que se aplican a toda la aplicación, no solo a una página específica.
 
 **¿Qué contiene?**
+
 - `global.css` - El archivo de estilos globales
 
 #### 📄 src/styles/global.css
@@ -230,18 +247,21 @@ El archivo principal de estilos CSS de toda la aplicación.
 
 **¿Para qué sirve?**
 Define:
+
 - Las fuentes que se usarán
 - La paleta de colores
 - Variables CSS para consistencia
 - Estilos base que se aplican a todos los elementos
 
 **¿Qué contiene?**
+
 - **@font-face**: Declaraciones de las fuentes personalizadas
 - **:root**: Variables CSS (colores, fuentes, espaciados, etc.)
 - **Estilos base**: Reset y estilos para el elemento body
 
 **¿Por qué usar variables CSS?**
 Las variables CSS (como `--color-primary: #2563eb;`) permiten:
+
 - **Consistencia**: Usar los mismos valores en todo el proyecto
 - **Facilidad de cambio**: Cambiar un color en un lugar y que se actualice en toda la app
 - **Mantenibilidad**: El código es más fácil de entender y modificar
@@ -258,6 +278,7 @@ El archivo principal de JavaScript de la aplicación.
 Es el punto de entrada para toda la lógica de JavaScript. Desde aquí se inicializa la aplicación y se cargan los componentes.
 
 **¿Qué hace?**
+
 - Importa los componentes necesarios
 - Inicializa la aplicación cuando el DOM está listo
 - Coordina la carga de diferentes partes de la aplicación
@@ -298,24 +319,31 @@ Cuando alguien abre tu aplicación, esto es lo que sucede:
 ## 🎓 Conceptos Importantes para Principiantes
 
 ### ¿Qué es HTML?
+
 HTML (HyperText Markup Language) es el lenguaje que define la **estructura** de una página web. Es como el esqueleto de una casa: define dónde van las paredes, las ventanas y las puertas.
 
 ### ¿Qué es CSS?
+
 CSS (Cascading Style Sheets) es el lenguaje que define el **aspecto** de una página web. Es como la decoración interior: define los colores, las fuentes, los tamaños y cómo se ve todo.
 
 ### ¿Qué es JavaScript?
+
 JavaScript es el lenguaje que define el **comportamiento** de una página web. Es como la electricidad y la plomería: hace que las cosas funcionen, que los botones respondan, que los gráficos se animen.
 
 ### ¿Qué es el DOM?
+
 DOM (Document Object Model) es una representación de la página web que JavaScript puede manipular. Piensa en ello como un árbol donde cada elemento HTML es una rama. JavaScript puede agregar, modificar o eliminar elementos de este árbol.
 
 ### ¿Qué son los componentes?
+
 Los componentes son piezas de código independientes y reutilizables. Son como bloques de LEGO: cada bloque tiene una función específica, y puedes combinarlos para crear estructuras complejas.
 
 ### ¿Qué significa "importar" en JavaScript?
+
 Importar significa traer código de otro archivo para usarlo en el archivo actual. Es como copiar el código de otro archivo, pero de una manera organizada y controlada.
 
 ### ¿Qué es una biblioteca (library)?
+
 Una biblioteca es un conjunto de código preescrito que puedes usar en tu proyecto. Bootstrap y Chart.js son bibliotecas que te ahorraran mucho tiempo porque ya tienen muchas funcionalidades listas para usar.
 
 ---
@@ -323,21 +351,27 @@ Una biblioteca es un conjunto de código preescrito que puedes usar en tu proyec
 ## 💡 Por Qué Esta Estructura es Buena
 
 ### 1. **Organización Clara**
+
 Cada tipo de archivo tiene su lugar. Sabes exactamente dónde encontrar algo.
 
 ### 2. **Escalabilidad**
+
 Es fácil agregar nuevas páginas, componentes o funcionalidades sin romper lo que ya existe.
 
 ### 3. **Mantenibilidad**
+
 Si algo deja de funcionar, es fácil encontrar el problema porque todo está organizado.
 
 ### 4. **Colaboración**
+
 Si varias personas trabajan en el proyecto, es menos probable que editen los mismos archivos al mismo tiempo.
 
 ### 5. **Reutilización**
+
 Los componentes se pueden usar en múltiples lugares, lo que reduce la cantidad de código duplicado.
 
 ### 6. **Separación de Responsabilidades**
+
 HTML, CSS y JavaScript están separados, lo que hace que cada archivo tenga un propósito claro y específico.
 
 ---
