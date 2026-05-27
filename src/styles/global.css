@@ -1,3 +1,5 @@
+@import url("../components/header/header-component.css");
+@import url("../components/footer/footer-component.css");
 @font-face {
   font-family: "Poppins";
   src: url("../../public/fonts/Poppins-Regular.ttf") format("truetype");
@@ -40,6 +42,16 @@
   --color-border: #e2e8f0;
   --color-border-light: #f1f5f9;
 
+  /* Chart Colors */
+  --chart-color-1: #ff6384;
+  --chart-color-2: #36a2eb;
+  --chart-color-3: #ffcd56;
+  --chart-color-4: #4bc0c0;
+  --chart-color-5: #ff9f40;
+  --chart-color-6: #ff6384;
+  --chart-color-7: #9966ff;
+  --chart-color-8: #c9cbcf;
+
   /* Typography */
   --font-family-base:
     "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -55,4 +67,7 @@ body {
   font-family: var(--font-family-base);
   color: var(--color-text);
   background-color: var(--color-background);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

@@ -1,46 +1,47 @@
 import { datosCrudos } from "../data/datosCrudos.js";
+import { chartColors } from "./colors.js";
 
 const tareas = datosCrudos.tareas;
 
-function getTareasPorEstado(tareas){
+function getTareasPorEstado(tareas) {
     const acumulador = {};
 
     tareas.forEach(tareas => {
 
         const estado = tareas.estado;
 
-        if(acumulador[estado]){
+        if (acumulador[estado]) {
             acumulador[estado]++;
-        }else{
+        } else {
             acumulador[estado] = 1;
         }
-        
+
     });
 
-    return{
+    return {
         labels: Object.keys(acumulador),
-        data:Object.values(acumulador)
+        data: Object.values(acumulador)
     };
 }
 
-document.addEventListener("DOMContentLoaded",() =>{
+document.addEventListener("DOMContentLoaded", () => {
     const resultado = getTareasPorEstado(tareas);
-
     const ctx = document.getElementById("chartTareasPorEstado");
 
-    new Chart(ctx,{
-        type:"bar",
-        data:{
-            labels:resultado.labels,
+    if (!ctx) {
+        console.error("Canvas element 'chartTareasPorEstado' not found");
+        return;
+    }
 
-            datasets:[{
+    new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: resultado.labels,
+
+            datasets: [{
                 label: "Tareas Por Estado",
-                data : resultado.data,
-                backgroundColor:[
-                    "violet",
-                    "green",
-                    "blue"
-                ]
+                data: resultado.data,
+                backgroundColor: chartColors.slice(0, resultado.labels.length)
             }]
 
         },

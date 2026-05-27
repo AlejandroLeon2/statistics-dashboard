@@ -22,13 +22,12 @@ import { datosCrudos } from "../data/datosCrudos.js";
 //   - **Uso esperado:** renderizar tarjetas KPI en el dashboard.
 // ---
 
-const data = datosCrudos;
 
-function getKPIs(data) {
 
-    let ventas = data.ventas;
-    let tareas = data.tareas;
-    let usuarios = data.usuarios;
+export function getKPIs() {
+    const ventas = datosCrudos.ventas;
+    const tareas = datosCrudos.tareas;
+    const usuarios = datosCrudos.usuarios;
 
     return [
         { title: "Ventas Totales", value: ventas.reduce((acc, venta) => acc + venta.monto, 0), unit: "S/" },
@@ -36,7 +35,4 @@ function getKPIs(data) {
         { title: "Empleados Activos", value: usuarios.filter(usuario => usuario.activo).length, unit: "personas" },
         { title: "Tareas Completadas", value: tareas.filter(tarea => tarea.estado === "completada").length, unit: "tareas" }
     ];
-
 }
-
-console.log(getKPIs(data));

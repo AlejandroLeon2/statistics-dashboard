@@ -1,4 +1,5 @@
 import { datosCrudos } from "../data/datosCrudos.js";
+import { chartColors } from "./colors.js";
 
 // - **Función:** `getMetodoPago(ventas)`  Pedro
 //   - **Entrada:** array de ventas.
@@ -28,18 +29,22 @@ function getMetodoPago(ventas) {
   };
 }
 
-// console.log(getMetodoPago(ventas));
-
 document.addEventListener("DOMContentLoaded", () => {
   const metodoPago = getMetodoPago(ventas);
   const ctx = document.getElementById("myChart");
+
+  if (!ctx) {
+    console.error("Canvas element 'myChart' not found");
+    return;
+  }
+
   new Chart(ctx, {
     type: "pie",
     data: {
       labels: metodoPago.labels,
       datasets: [{
         data: metodoPago.data,
-        backgroundColor: ["#ff6384", "#36a2eb", "#ffcd56"]
+        backgroundColor: chartColors.slice(0, metodoPago.labels.length)
       }]
     }
   });

@@ -44,7 +44,7 @@ Aquí se definen funciones que transforman los datos crudos en estructuras lista
 
 ---
 
-### b Asistencia
+### b Asistencia - Jamir
 
 - **Función:** `getAsistenciaPorEstado(asistencia)` Jamir
   - **Entrada:** array de registros de asistencia.
@@ -54,7 +54,7 @@ Aquí se definen funciones que transforman los datos crudos en estructuras lista
 
 ---
 
-### c Tareas
+### c Tareas - Robert
 
 - **Función:** `getTareasPorEstado(tareas)`
   - **Entrada:** array de tareas.

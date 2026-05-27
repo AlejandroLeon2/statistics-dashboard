@@ -1,1 +1,22 @@
 @import url("../../styles/global.css");
+
+.card {
+  border-color: var(--color-border);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+  background-color: var(--color-background-alt);
+  border-bottom-color: var(--color-border);
+}
+
+canvas {
+  max-height: 300px;
+}
