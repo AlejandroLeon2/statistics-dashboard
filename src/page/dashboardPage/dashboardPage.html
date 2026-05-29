@@ -15,8 +15,9 @@
     <header id="header"></header>
     <main id="main" class="container-fluid py-4">
       <header class="mb-4">
-        <h1 class="h3 fw-bold">Dashboard de Gestión – Restaurante</h1>
-        <p class="text-muted mb-0">Resumen de estadísticas y métricas</p>
+        <h1 class="h3 fw-bold text-center">
+          Dashboard de Gestión – Restaurante
+        </h1>
       </header>
 
       <section
@@ -26,7 +27,7 @@
       ></section>
 
       <section class="row g-4 mb-4" aria-label="Gráficos de ventas">
-        <article class="col-lg-6 col-md-4">
+        <article class="col-lg-6 col-md-6">
           <div class="card shadow-sm h-100">
             <div class="card-header bg-white border-0 py-3">
               <h2
@@ -42,7 +43,7 @@
           </div>
         </article>
 
-        <article class="col-lg-6 col-md-4">
+        <article class="col-lg-6 col-md-6">
           <div class="card shadow-sm h-100">
             <div class="card-header bg-white border-0 py-3">
               <h2
@@ -57,7 +58,7 @@
             </div>
           </div>
         </article>
-        <article class="col-lg-12 col-md-12">
+        <article class="col-12">
           <div class="card shadow-sm h-100">
             <div class="card-header bg-white border-0 py-3">
               <h2
@@ -82,6 +83,46 @@
                 class="h6 mb-0 fw-semibold"
                 style="color: var(--chart-color-1)"
               >
+                Ventas por Día
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="row mb-3">
+                <div class="col-md-5">
+                  <label
+                    for="filtroFechaInicioDia"
+                    class="form-label fw-semibold"
+                    >Fecha Inicio</label
+                  >
+                  <select id="filtroFechaInicioDia" class="form-select">
+                    <option value="">Todas las fechas</option>
+                  </select>
+                </div>
+                <div class="col-md-5">
+                  <label for="filtroFechaFinDia" class="form-label fw-semibold"
+                    >Fecha Fin</label
+                  >
+                  <select id="filtroFechaFinDia" class="form-select">
+                    <option value="">Todas las fechas</option>
+                  </select>
+                </div>
+                <div class="col-md-2 d-flex align-items-end">
+                  <button id="btnFiltrarDia" class="btn btn-primary w-100">
+                    Filtrar
+                  </button>
+                </div>
+              </div>
+              <canvas id="chartVentasPorDia"></canvas>
+            </div>
+          </div>
+        </article>
+        <article class="col-lg-12 col-md-12">
+          <div class="card shadow-sm h-100">
+            <div class="card-header bg-white border-0 py-3">
+              <h2
+                class="h6 mb-0 fw-semibold"
+                style="color: var(--chart-color-1)"
+              >
                 Ventas por Hora
               </h2>
             </div>
@@ -94,10 +135,11 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
-    <script type="module" src="./dashboardPage.js"></script>
+    <script type="module" src="../../scripts/kpis.js"></script>
     <script type="module" src="../../scripts/metodoPago.js"></script>
     <script type="module" src="../../scripts/ventasCategoria.js"></script>
     <script type="module" src="../../scripts/ventasPorHora.js"></script>
+    <script type="module" src="../../scripts/ventasPorDia.js"></script>
     <script type="module" src="../../scripts/taresPorEstado.js"></script>
   </body>
 </html>

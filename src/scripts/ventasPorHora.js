@@ -46,7 +46,12 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
         }
     });
 });

@@ -45,7 +45,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 label: "Ventas por Categoria",
                 data: resultado.data,
                 backgroundColor: chartColors.slice(0, resultado.labels.length)
-            }]
+            }],
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
 
         },
 

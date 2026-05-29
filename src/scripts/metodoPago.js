@@ -45,7 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
       datasets: [{
         data: metodoPago.data,
         backgroundColor: chartColors.slice(0, metodoPago.labels.length)
-      }]
+      }],
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+      }
     }
   });
 });
